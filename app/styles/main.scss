@@ -1,0 +1,781 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+.bg {
+    background-color: #eee;
+}
+
+
+.header {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.main {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 8px;    
+    margin: 10px 0;
+}
+
+.header h1 {
+    float: left;
+}
+
+.main h2 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.main h3 {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.nav {
+    float: left;
+    margin-top: 25px;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li {
+    display: inline-block;
+}
+
+.nav ul li .btn {
+    display: inline-block;
+    width: 100px;
+}
+
+.side-left,
+.side-mid {
+    padding-right: 10px;
+}
+
+.side-right {
+    padding-left: 10px;
+}
+
+.side-left {
+    width: 600px;
+}
+
+.side-mid {
+    width: 400px;
+}
+
+.side-right {
+    width: 180px;
+}
+
+.side-left,
+.side-mid,
+.side-right {
+    float: left;
+}
+
+.assignment-course {
+    overflow: hidden;
+}
+
+.assignment-course .assign-book-cover {
+    float: left;
+}
+
+.assignment-course .assign-book-cover img {
+    width: 80px;
+}
+
+.assignment-course .book-desc,
+.assignment-course .assign  {
+    margin-left: 90px;
+}
+
+.assignment-course .book-desc .book-course {
+    margin: 0;
+    font-size: 12px;
+}
+
+.assignment-course .book-desc .book-course a {
+    color: #999;
+}
+
+.assignment-course .book-desc .book-title a {
+    font-size: 15px;    
+    font-weight: bold;
+}
+
+.assignment-course .assign {
+
+}
+
+.assignment-week h3 {
+    font-size: 14px;
+}
+
+.assignment-course {
+    position: relative;
+}
+
+.assignment-course .post-time {
+    font-size: 11px;
+    color: #ccc;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.feeds {
+    padding: 0 8px;
+    padding-bottom: 20px;
+}
+
+.feed {
+}
+
+.feed .user-img {
+    float: left;
+    height: 40px;
+}
+
+.feed .user-img img {
+    width: 40px;
+}
+
+.feed .feed-text {
+    margin-left: 50px;
+}
+
+.feed .feed-text .name {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.feed .feed-text .time {
+    font-size: 10px;
+    color: #999;
+}
+
+.feed .feed-text .activity {
+    font-size: 13px;
+}
+
+.feed .feed-text .activity p {
+    margin: 0;
+}
+
+.feed .feed-text .note {
+    font-size: 11px;
+    color: #999;
+    padding: 3px 5px;
+    background-color: #f8f8f8;
+}
+
+
+.books ul {
+    list-style: none;
+    padding: 0;
+}
+
+.books .book-img-wrapper {
+    text-align: center;
+}
+
+.books li .book-list-cover img {
+    width: 100px;
+}
+
+.books li .desc .progress {
+    height: 12px;
+    margin: 5px 0;
+}
+
+.books li .desc .title {
+    font-size: 12px;
+    font-weight: bold;    
+}
+
+.books li .desc .author {
+    font-size: 11px;
+    color: #999; 
+}
+
+
+
+
+/* ==========================================================================
+   Books
+   ========================================================================== */
+
+.book {
+    overflow: hidden;
+    position: relative;
+}
+.book .book-cover img {
+    width: 130px;
+}
+
+.book .book-cover,
+.book .book-desc {
+    float: left;
+}
+
+.book .book-desc {
+    margin-left: 10px;
+}
+
+.book .book-desc .title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.book .book-desc .author a {
+    font-size: 12px;
+    color: #999;
+}
+
+.book .book-desc .course {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.book .book-desc .instructor a {
+    font-size: 12px;
+    color: #999;
+}
+
+.book .read-btn-div {
+    position: absolute;
+    bottom: 10px;
+}
+
+.book .book-notes {
+    width: 250px;
+    height: 160px;
+    overflow: auto;
+}
+
+.book .book-notes .note {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+}
+
+.book .book-notes .user-img img {
+    width: 20px;
+    float: left;
+}
+
+.book .book-notes .note-text-div {
+    margin-left: 25px;
+}
+
+.book .book-notes .note-text-div .user-name {
+    font-size: 12px;
+}
+
+.book .book-notes .note-text-div .note-text {
+    font-size: 11px;
+}
+
+.book .book-notes,
+.book .book-progress {
+    float: right;
+}
+
+/* for temp img progress*/
+.book .book-progress {
+    width: 160px;
+    margin-right: 20px;
+}
+.book .book-progress img {
+    width: 160px;
+}
+
+
+
+
+/* ==========================================================================
+   Course
+   ========================================================================== */
+.courses .course {
+    overflow: hidden;
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+.courses .course .course-progress {
+    float: left;
+}
+
+.courses .course .course-progress img {
+    width: 180px;
+}
+
+.courses .course .course-text-div {
+    margin-left: 20px;
+    float: left;
+    width: 365px;
+}
+
+.courses .course .course-text-div .title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.courses .course .course-text-div .instructor a {
+    font-size: 12px;
+    color: #999;
+}
+
+.courses .course .course-books {
+    position: absolute;
+    bottom: 10px;
+}
+
+.courses .course .course-books a {
+    margin-right: 6px;
+}
+
+.courses .course .course-books img {
+    height: 80px;
+}
+.courses .course .tab-list {
+    margin-left: 580px;
+}
+.courses .course .tab-list .tab-nav {
+    float: left;
+}
+.courses .course .tab-list .tab-nav h4 {
+    margin: 0;
+    background-color: #eee;
+    width: 30px;
+    border: 1px solid #eee;
+    border-right: none;
+}
+.courses .course .tab-list .tab-nav h4 a {
+    display: inline-block;
+    padding: 5px;
+    color: #999;
+}
+.courses .course .tab-list .tab-nav h4.selected {
+    border: 1px solid #ccc;
+    border-right: none;
+    background-color: #fff;
+    width: 31px;
+}
+.courses .course .tab-list .tab-items {
+    margin-left: 30px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.tab-items .i-assignment {
+    overflow: auto;
+    height: 170px;
+}
+.i-assign-d {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    position: relative;
+}
+.i-assign-d img {
+    height: 50px;
+    float: left;
+}
+
+.i-assign-d .text {
+    margin-left: 50px;
+}
+
+.i-assign-d .text .book-name {
+    margin-bottom: 5px;
+}
+
+.i-assign-d .text .book-name a {
+    color: #999;
+    font-size: 13px;
+}
+.i-assign-d .date-done {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.i-assign-d .date-done .date {    
+    font-size: 10px;
+    color: #999;
+}
+.i-assign-d .date-done .isDone {    
+    margin-right: 10px;
+    font-size: 25px;
+    color: #999;
+    text-align: right;
+}
+.i-assign-d .date-done .isDone.yes {    
+    color: #47a447;
+}
+.i-friends {
+    overflow: auto;
+    height: 170px;
+}
+
+.friend-feed {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+}
+
+.friend-feed .user-img img {
+    width: 30px;
+    float: left;
+}
+
+.friend-feed .friend-text-div {
+    margin-left: 35px;
+}
+
+.friend-feed .friend-text-div .time {
+    font-size: 10px;
+    color: #999;
+    margin-left: 5px;
+}
+
+.friend-feed .friend-text-div .user-name {
+    font-size: 13px;
+}
+
+.friend-feed .friend-text-div .friend-text {
+    font-size: 12px;
+}
+
+/* ==========================================================================
+   Friends
+   ========================================================================== */
+
+.friends .left-filter {
+    width: 200px;
+    float: left;
+    overflow: hidden;
+}
+.friends .left-filter h3{
+    font-size: 13px;
+}
+.friends .f-list a {
+    font-size: 13px;
+}
+.friends .friends-list {
+    margin-left: 210px;
+}
+
+.friends .friends-list .friend {
+    overflow: hidden;
+}
+
+.friends-list .friend .friend-img {
+    float: left;
+}
+
+.friends-list .friend .friend-img img {
+    width: 100px;
+}
+.friends-list .friend .friend-info-div {
+    margin-left: 110px;
+}
+.friends-list .friend .friend-info-div .name {
+    font-size: 15px;
+    font-weight: bold;
+}
+.friends-list .friend .friend-info-div h3 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 3px;
+}
+.friends-list .friend .friend-info-div .courses a,
+.friends-list .friend .friend-info-div .books a {
+    color: #999;
+}
+.friends-list .friend .friend-info-div .courses {
+    float: left;
+    width: 250px;
+}
+.friends-list .friend .friend-info-div .books {
+    width: 250px;
+    margin-left: 20px;
+    float: left;
+}
+.friends-list .friend .friend-info-div .courses ul,
+.friends-list .friend .friend-info-div .books ul {
+    list-style: disc;
+    padding-left: 15px;
+    font-size: 11px;
+}
+.friends-list .friend .friend-info-div li {
+    margin-bottom: 3px;    
+    line-height: 15px;
+}
+.friends .left-filter h3 {
+    font-size: 15px;
+    color: #aaa;
+    font-weight: bold;
+}
+
+.friends .left-filter ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.friends .left-filter ul li {
+    margin-bottom: 6px;    
+    line-height: 15px;
+}
+
+.friends .left-filter ul li a,
+.friends .left-filter ul li b {
+    font-size: 12px;
+}
+
+.friends .f-sort {
+    font-size: 12px;
+}
+
+
+
+
+/* ==========================================================================
+   Me
+   ========================================================================== */
+
+.me .side-left {
+    float: left;
+    width: 600px;
+}
+.me .side-mid {
+    width: auto;
+    float: none;
+    margin-left: 600px;
+}
+
+.me-info-div {
+    overflow: hidden;
+}
+.me-info-div .me-img{
+    width: 250px;
+    float: left;
+}
+
+.me-info-div .me-text-div {
+    margin-left: 260px;
+}
+
+.me-info-div .me-text-div .name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.me-info-div .me-text-div .desc {
+    font-size: 13px;
+    color: #999;
+}
+
+.me-info-div .me-text-div .courses h3, 
+.me-info-div .me-text-div .books h3 {
+    font-size: 13px;
+    color: #999;
+    font-weight: bold;
+}
+
+.me-info-div .me-text-div .courses ul, 
+.me-info-div .me-text-div .books ul{
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+.me-book {
+    overflow: hidden;
+}
+
+.me-book .book-img {
+    float: left;
+}
+
+.me-book .book-img img {
+    width: 100px;
+}
+.me-book .mb-text-info {
+    margin-left: 110px;
+}
+.me-book .mb-text-info .title {
+    font-weight: bold;
+    font-size: 15px;
+}
+.me-book .mb-text-info .author a {
+    color: #999;
+    font-size: 12px;
+}
+.me-book .mb-text-info .progress-text {
+    margin-top: 10px;
+    font-size: 12px;
+}
+.me-book .mb-text-info .p-t-v {
+    font-size: 16px;
+    font-weight: bold;
+}
+.me-book .mb-text-info .progress {
+    margin-top: 0;
+}
+
+/* ==========================================================================
+   PDF Reader
+   ========================================================================== */
+
+#pdfContainer {
+    margin: 0 auto;
+}
+
+.reader-panel-div {
+    float: right;
+    margin-right: 80px;
+}
+
+.fixed-panel-div {
+    position: fixed;
+}
+
+.reader-panel-div .panel-tool-div a{
+    margin-top: 5px;
+    display: block;
+}
+
+.reader-panel-div .nav-btn-div a{
+    margin-top: 5px;
+    display: block;
+    position: relative;
+}
+
+.reader-panel-div .pre-page{
+    height: 120px;
+}
+
+.reader-panel-div .next-page{
+    height: 200px;
+}
+
+.reader-panel-div .nav-btn-div span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -10px;
+}
+
+.book-info-div .fixed-panel-div {
+    background-color:rgba(255,255,255,0.8);
+    padding: 10px;
+    width: 1008px;
+    margin-left: 96px;
+    top: 0;
+}
+
+.book-info-div .title {
+    float: left;
+    font-weight: bold;
+}
+
+.book-info-div .chapter {
+    float: right;
+    font-size: 13px;
+    color: #999;
+}
+
+.tool-pop {
+    position: absolute;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+.tool-pop ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.tool-pop ul li {
+    display: inline-block;
+}
+
+.tool-pop ul li a {
+    display: inline-block;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.tool-pop ul li a:hover {
+    background: #eee;
+}
+
+.hl-text {
+    background-color: rgba(255,225,0,0.5);
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
