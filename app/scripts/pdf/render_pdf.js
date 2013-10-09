@@ -7,17 +7,16 @@
 // Input: page, highlights objects, notes objects
 // Author: Neil Ding
 
-var loadPage = (function () {
-
-    var pdfData = 'data/pdf/dba.pdf'; // should read from URL or DOM
-
+var LoadPage = function () {
+    var args = Array.prototype.slice.call(arguments, 0);
+    console.log(args);
+    var file_name = args.shift();
+    var page = parseInt(args.shift());
+    var book_id = args.shift();
+    var pdfData = 'data/pdf/' + file_name; // should read from URL or DOM
     var scale = 2; // Set this to whatever you want. This is basically the "zoom" factor for the PDF.
-
-    var page = 44; // fill current page by server
-
     var highlights = []; // fill hights of current page by server
-
-    var pdf; // store pdf file into a local variable 
+    var pdf; // store pdf file into a locally global variable 
 
 
     // RENDER 
@@ -115,22 +114,40 @@ var loadPage = (function () {
         loadPdf(pdfData);
     };
 
+    function saveProgress(page) {
+        $.ajax({
+            type: 'PUT',
+            url: "http://is-reader.herokuapp.com/book/" + book_id,
+            //url: "http://localhost:3000/book/" + book_id,
+            data: {last_page: page},
+            dataType: 'json',
+            success: function(data){
+                console.log(data);
+            }
+        });
+    }
+
     $('.next-page').click(function () {
+        page = page + 1;
         highlights = [];
-        pageGoto(page+1);
+        pageGoto(page);
 
         // code : track progross to server
+
     });
 
     $('.pre-page').click(function () {
+        page = page - 1;
         highlights = [];
-        pageGoto(page-1);
+        pageGoto(page);
 
         // code : track progross to server
+
     });
 
     function pageGoto(p) {
         page = p;
+        saveProgress(page);
         jQuery("#pdfContainer").html("");
         $("html, body").animate({ scrollTop: 0 }, 0);
         pdf.then(renderPdf);        
@@ -242,17 +259,25 @@ var loadPage = (function () {
 
     // just for demo
 
-    return function loadPageHL(p, startContainer, endContainer, startOffset, endOffest) {
-        highlights[0] = {
-            page : page-1, 
-            startContainer : startContainer, 
-            endContainer : endContainer, 
-            startOffset : startOffset, 
-            endOffest : endOffest
-        };
+    return {
 
-        pageGoto(p);
+        loadHL: function (p, startContainer, endContainer, startOffset, endOffest) {
+            highlights[0] = {
+                page : page-1, 
+                startContainer : startContainer, 
+                endContainer : endContainer, 
+                startOffset : startOffset, 
+                endOffest : endOffest
+            };
+
+            pageGoto(p);
+
+        },
+
+        pageGoto: function(p) {
+            pageGoto(p);
+        }
 
     }
 
-})();
+};

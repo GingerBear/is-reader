@@ -24,9 +24,6 @@
 
         <!-- Add your site or application content here -->
         <div class="bg">
-            <div class="header">
-
-            </div>
             <div class="main">
                 <div class="book-info-div">
                     <div class="fixed-panel-div">
@@ -38,7 +35,7 @@
                     <div class="fixed-panel-div">
                         <div class="panel-tool-div">
                             <a class="btn btn-default" title="Menu"><span class="glyphicon glyphicon-list"></span></a>
-                            <a class="btn btn-default" title="Note & Highlights"><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a class="btn btn-default" title="Note and Highlights"><span class="glyphicon glyphicon-pencil"></span></a>
                             <a class="btn btn-default" title="Bookmarks"><span class="glyphicon glyphicon-paperclip"></span></a>
                         </div>
                         <div class="nav-btn-div">
@@ -69,6 +66,30 @@
         <script src="scripts/pdf/pdf.js"></script>
         <script src="scripts/pdf/textlayerbuilder.js"></script>
         <script src="scripts/pdf/render_pdf.js"></script>
+        <script>
+
+            function getURLParameter(name) {
+                return decodeURI(
+                    (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+                );
+            }
+
+            var book_id = getURLParameter('id');
+            var page;
+
+            $.ajax({
+                type: 'GET',
+                url: "http://is-reader.herokuapp.com/book/" + book_id,
+                //url: "http://localhost:3000/book/" + book_id,
+                dataType: 'jsonp',
+                success: function(data){
+                    console.log(data);
+                    if (data) {
+                        page = new LoadPage(data.file_name, data.last_page, data._id);
+                    }
+                }
+            });
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
