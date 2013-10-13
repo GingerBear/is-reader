@@ -27,15 +27,15 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 
 .header {
-    width: 1200px;
+    /*width: 1200px;*/
     margin: 0 auto;
     overflow: hidden;
 }
 
 .main {
-    width: 1200px;
+    /*width: 1200px;*/
     margin: 0 auto;
-    padding: 10px 0;
+    /*padding: 10px 0;*/
     overflow: hidden;
 }
 
@@ -667,15 +667,26 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 #pdfContainer {
     margin: 0 auto;
+    position: relative;
+}
+#pdfContainer .textLayer {
+    position: absolute;
 }
 
+.book-info-div {
+    position: fixed;
+    left: 0;
+    z-index: 99;
+    padding: 5px;
+    background-color:rgba(255,255,255,0.8);
+}
 .reader-panel-div {
-    float: right;
-    margin-right: 80px;
+    position: fixed;
+    right: 10px;
+    z-index: 99;
 }
 
 .fixed-panel-div {
-    position: fixed;
 }
 
 .reader-panel-div .panel-tool-div a{
@@ -687,6 +698,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     margin-top: 5px;
     display: block;
     position: relative;
+    background-color:rgba(255,255,255,0.8);
 }
 
 .reader-panel-div .pre-page{
@@ -703,14 +715,6 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     left: 50%;
     margin-left: -8px;
     margin-top: -10px;
-}
-
-.book-info-div .fixed-panel-div {
-    background-color:rgba(255,255,255,0.8);
-    padding: 10px;
-    width: 1008px;
-    margin-left: 96px;
-    top: 0;
 }
 
 .book-info-div .title {
@@ -738,11 +742,10 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 }
 
 .tool-pop ul li {
-    display: inline-block;
 }
 
 .tool-pop ul li a {
-    display: inline-block;
+    display: block;
     padding: 8px 10px;
     text-decoration: none;
     color: #333;

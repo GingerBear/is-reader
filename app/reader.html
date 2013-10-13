@@ -14,7 +14,7 @@
 
         
         <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/pdf/minimal.css">
+        <link rel="stylesheet" href="styles/pdf/pdf-render.css">
         <script src="bower_components/modernizr/modernizr.js"></script>
     </head>
     <body>
@@ -27,8 +27,8 @@
             <div class="main">
                 <div class="book-info-div">
                     <div class="fixed-panel-div">
-                        <div class="title">Developing Backbone.js Applications</div>
-                        <div class="chapter">Chapter 3</div>
+                        <div class="title"></div>
+                        <div class="chapter"></div>
                     </div>
                 </div>
                 <div class='reader-panel-div'>
@@ -49,9 +49,9 @@
         </div>
         <div class="tool-pop hidden">
             <ul>
-                <li><a class="hl-btn" href=""><span class="glyphicon glyphicon-header"></span> Highlights</a></li>
-                <li><a class="note-btn" href=""><span class="glyphicon glyphicon-pencil"></span> Notes</a></li>
-                <li><a class="share-btn" href=""><span class="glyphicon glyphicon-share"></span> Share</a></li>
+                <li><a class="hl-btn pop-btn" href=""><span class="glyphicon glyphicon-header"></span> Highlights</a></li>
+                <li><a class="note-btn pop-btn" href=""><span class="glyphicon glyphicon-pencil"></span> Notes</a></li>
+                <li><a class="share-btn pop-btn" href=""><span class="glyphicon glyphicon-share"></span> Share</a></li>
             </ul>
         </div>
 
@@ -79,13 +79,16 @@
 
             $.ajax({
                 type: 'GET',
-                url: "http://is-reader.herokuapp.com/book/" + book_id,
-                //url: "http://localhost:3000/book/" + book_id,
+                //url: "http://is-reader.herokuapp.com/book/" + book_id,
+                url: "http://localhost:3000/book/" + book_id,
                 dataType: 'jsonp',
                 success: function(data){
                     console.log(data);
                     if (data) {
+                        $('.title').html(data.title);
+                        $('.title').html(data.title);
                         page = new LoadPage(data.file_name, data.last_page, data._id);
+                        page.init();
                     }
                 }
             });

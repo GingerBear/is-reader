@@ -77,8 +77,8 @@
         <script>        
             $.ajax({
                 type: 'GET',
-                url: "http://is-reader.herokuapp.com/books",
-                //url: "http://localhost:3000/books",
+                //url: "http://is-reader.herokuapp.com/books",
+                url: "http://localhost:3000/books",
                 dataType: 'jsonp',
                 success: function(data){
                     var output = Mustache.render($('.book-tpl').text(), data);
